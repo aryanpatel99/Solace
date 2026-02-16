@@ -15,19 +15,28 @@ export default function DotCalendar({
   currentDay,
 }: DotCalendarProps) {
   const monthGrid = useMemo(() => {
+     const today = new Date();
+      today.setHours(0, 0, 0, 0); // normalize to midnight for accurate comparison
+
     return MONTHS.map((monthName, monthIndex) => {
       const totalDays = getDaysInMonth(year, monthIndex);
-
       const days = Array.from({ length: totalDays }, (_, i) => {
         const dayNumber = i + 1;
 
+        const dotDate = new Date(year, monthIndex, dayNumber);
+        dotDate.setHours(0, 0, 0, 0);
+
         let status: DotStatus = "future";
 
-        if (monthIndex < currentMonth) status = "passed";
-        else if (monthIndex === currentMonth) {
-          if (dayNumber < currentDay) status = "passed";
-          else if (dayNumber === currentDay) status = "today";
-        }
+        // if (monthIndex < currentMonth) status = "passed";
+        // else if (monthIndex === currentMonth) {
+        //   if (dayNumber < currentDay) status = "passed";
+        //   else if (dayNumber === currentDay) status = "today";
+        // }
+
+        if (dotDate < today) status = "passed";
+        else if (dotDate.getTime() === today.getTime())
+          status = "today";
 
         return {
           id: `${monthIndex}-${dayNumber}`,

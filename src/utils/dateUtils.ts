@@ -71,6 +71,12 @@ export const formatFullDate = (date:Date):string =>{
         weekday: 'short',
         month: 'short',
         day: 'numeric',
-        year: 'numeric'
+        // year: 'numeric'
     });
 }
+
+export const formatMonthDay = (date: Date): string =>
+  date.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+  })

@@ -5,21 +5,21 @@ import type { DotStatus } from "../types/dot";
 
 interface DotCalendarProps {
   year: number;
-  currentMonth: number;
-  currentDay: number;
+  currentDate: Date;
 }
 
 export default function DotCalendar({
   year,
-  currentMonth,
-  currentDay,
+  currentDate ,
+  // currentMonth,
 }: DotCalendarProps) {
   const monthGrid = useMemo(() => {
-     const today = new Date();
-      today.setHours(0, 0, 0, 0); // normalize to midnight for accurate comparison
+    const normalizedCurrent = new Date(currentDate);
+    normalizedCurrent.setHours(0, 0, 0, 0);
 
     return MONTHS.map((monthName, monthIndex) => {
       const totalDays = getDaysInMonth(year, monthIndex);
+
       const days = Array.from({ length: totalDays }, (_, i) => {
         const dayNumber = i + 1;
 
@@ -28,15 +28,9 @@ export default function DotCalendar({
 
         let status: DotStatus = "future";
 
-        // if (monthIndex < currentMonth) status = "passed";
-        // else if (monthIndex === currentMonth) {
-        //   if (dayNumber < currentDay) status = "passed";
-        //   else if (dayNumber === currentDay) status = "today";
-        // }
-
-        if (dotDate < today) status = "passed";
-        else if (dotDate.getTime() === today.getTime())
-          status = "today";
+        if (dotDate < normalizedCurrent) status = "passed";
+      else if (dotDate.getTime() === normalizedCurrent.getTime())
+        status = "today";
 
         return {
           id: `${monthIndex}-${dayNumber}`,
@@ -47,7 +41,7 @@ export default function DotCalendar({
 
       return { monthName, days };
     });
-  }, [year, currentMonth, currentDay]);
+  }, [year, currentDate]);
 
   return (
     <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 max-w-6xl">

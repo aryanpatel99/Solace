@@ -23,7 +23,9 @@ function App() {
       <Header date={formattedDate}/>
       <Countdown daysLeft={daysLeft} timeLeft={timeLeft}/>
       <YearProgress progress={progress} year = {now.getFullYear()}/>
-      <DotCalendar  currentMonth={currentMonth} currentDay={currentDay} year={now.getFullYear()}/>
+      {/* <DotCalendar  currentMonth={currentMonth} currentDay={currentDay} year={now.getFullYear()}/> */}
+      <DotCalendar   year={now.getFullYear()}
+  currentDate={now}/>
     </div>
 
     </>

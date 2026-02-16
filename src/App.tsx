@@ -15,6 +15,7 @@ function App() {
   const progress = getYearProgress(now);
   const timeLeft = getTimeLeftToday(now);
   const formattedDate = formatFullDate(now);
+  const currentMonth = now.getMonth();
 
   return (
     <>
@@ -22,7 +23,7 @@ function App() {
       <Header date={formattedDate}/>
       <Countdown daysLeft={daysLeft} timeLeft={timeLeft}/>
       <YearProgress progress={progress} year = {now.getFullYear()}/>
-      <DotCalendar totalDays={totalDays} currentDay={currentDay} year={now.getFullYear()}/>
+      <DotCalendar  currentMonth={currentMonth} currentDay={currentDay} year={now.getFullYear()}/>
     </div>
 
     </>

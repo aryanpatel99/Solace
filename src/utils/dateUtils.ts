@@ -80,3 +80,18 @@ export const formatMonthDay = (date: Date): string =>
     month: "short",
     day: "numeric",
   })
+
+
+
+//  this is for the dot calendar component to get the number of days in each month
+export const MONTHS = [
+  "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+];
+
+export const getDaysInMonth = (year: number, monthIndex: number): number => {
+  return new Date(year, monthIndex + 1, 0).getDate();
+};
+
+
+

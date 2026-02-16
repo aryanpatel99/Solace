@@ -1,46 +1,64 @@
-import { useMemo } from 'react'
-import { formatMonthDay } from '../utils/dateUtils';
-import TooltipDot from './TooltipDot';
-import type { DotStatus } from '../types/dot';
+import { useMemo } from "react";
+import TooltipDot from "./TooltipDot";
+import { MONTHS, getDaysInMonth } from "../utils/dateUtils";
+import type { DotStatus } from "../types/dot";
 
 interface DotCalendarProps {
-    totalDays: number;
-    currentDay: number;
-    year: number;
+  year: number;
+  currentMonth: number;
+  currentDay: number;
 }
 
-export default function DotCalendar({totalDays, currentDay, year}: DotCalendarProps) {
-    const dots = useMemo(()=>{
-        return Array.from({length: totalDays}, (_, i) => {
-            const dayNumber = i + 1;
+export default function DotCalendar({
+  year,
+  currentMonth,
+  currentDay,
+}: DotCalendarProps) {
+  const monthGrid = useMemo(() => {
+    return MONTHS.map((monthName, monthIndex) => {
+      const totalDays = getDaysInMonth(year, monthIndex);
 
-            const date = new Date(year, 0, dayNumber); // January 1st of the year + dayNumber
-            const dateLabel = formatMonthDay(date);
+      const days = Array.from({ length: totalDays }, (_, i) => {
+        const dayNumber = i + 1;
 
-            let status: DotStatus = "future"; // default to future
+        let status: DotStatus = "future";
 
-            if(dayNumber < currentDay) {
-                status = "passed";
-            }else if(dayNumber === currentDay) {
-                status = "today";
-            }
+        if (monthIndex < currentMonth) status = "passed";
+        else if (monthIndex === currentMonth) {
+          if (dayNumber < currentDay) status = "passed";
+          else if (dayNumber === currentDay) status = "today";
+        }
 
-            return { id: i, status, dateLabel };
+        return {
+          id: `${monthIndex}-${dayNumber}`,
+          status,
+          dateLabel: `${monthName} ${dayNumber}`,
+        };
+      });
 
-        })
-    }, [totalDays, currentDay, year]);
+      return { monthName, days };
+    });
+  }, [year, currentMonth, currentDay]);
 
   return (
-    <div className="flex flex-wrap justify-center gap-2 max-w-6xl">
-      {dots.map((dot) => (
-        <TooltipDot
-          key={dot.id}
-          status={dot.status}
-          dateLabel={dot.dateLabel}
-        />
+    <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 max-w-6xl">
+      {monthGrid.map((month) => (
+        <div key={month.monthName} className="flex flex-col gap-3">
+          <span className="text-xs text-zinc-500 tracking-widest uppercase">
+            {month.monthName}
+          </span>
+
+          <div className="flex flex-wrap gap-2">
+            {month.days.map((day) => (
+              <TooltipDot
+                key={day.id}
+                status={day.status}
+                dateLabel={day.dateLabel}
+              />
+            ))}
+          </div>
+        </div>
       ))}
     </div>
-  )
+  );
 }
-
-// export default DotCalender

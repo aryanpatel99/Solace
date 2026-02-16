@@ -1,5 +1,3 @@
-import React from 'react'
-
 const YearProgress = ({ progress, year }: { progress: number, year: number }) => {
   return (
     <div className='text-white'>

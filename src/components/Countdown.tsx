@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Countdown = ({ daysLeft, timeLeft }: { daysLeft: number, timeLeft: string}) => {
   return (
     <div className='text-white flex flex-col items-center space-y-2 justify-center'>

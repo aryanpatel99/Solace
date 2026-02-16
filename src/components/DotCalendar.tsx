@@ -41,7 +41,7 @@ export default function DotCalendar({
 
       return { monthName, days };
     });
-  }, [year, currentDate]);
+  }, [year, currentDate.getTime()]);
 
   return (
     <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 max-w-6xl">

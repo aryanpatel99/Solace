@@ -16,8 +16,6 @@ function App() {
   const timeLeft = getTimeLeftToday(now);
   const formattedDate = formatFullDate(now);
 
-  console.log(now, totalDays, currentDay, daysLeft, progress, timeLeft, formattedDate);
-
   return (
     <>
     <div className='flex flex-col items-center justify-center bg-black min-h-screen gap-8 overflow-x-hidden p-4'>

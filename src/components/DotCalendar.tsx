@@ -3,13 +3,13 @@ import { formatMonthDay } from '../utils/dateUtils';
 import TooltipDot from './TooltipDot';
 import type { DotStatus } from '../types/dot';
 
-interface DotCalenderProps {
+interface DotCalendarProps {
     totalDays: number;
     currentDay: number;
     year: number;
 }
 
-export default function DotCalender({totalDays, currentDay, year}: DotCalenderProps) {
+export default function DotCalendar({totalDays, currentDay, year}: DotCalendarProps) {
     const dots = useMemo(()=>{
         return Array.from({length: totalDays}, (_, i) => {
             const dayNumber = i + 1;

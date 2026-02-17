@@ -14,7 +14,7 @@ export default function TooltipDot({status, dateLabel}: TooltipDotProps) {
     if(status === "passed") {
         color = "bg-zinc-400";
     }else if(status === "today") {
-        color = "bg-white scale-125 shadow-[0_0_8px_rgba(255,255,255,0.3)]";
+        color = "bg-white scale-125 shadow-[0_0_8px_rgba(255,255,255,0.3)] animate-pulse";
     }else {
         color = "bg-zinc-900 border border-zinc-800/60";
     }

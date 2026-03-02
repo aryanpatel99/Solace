@@ -11,7 +11,6 @@ interface DotCalendarProps {
 export default function DotCalendar({
   year,
   currentDate ,
-  // currentMonth,
 }: DotCalendarProps) {
   const monthGrid = useMemo(() => {
     const normalizedCurrent = new Date(currentDate);

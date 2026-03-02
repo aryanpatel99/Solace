@@ -1,73 +1,69 @@
-# React + TypeScript + Vite
+# Solace
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Solace is a beautifully designed, minimalist time-tracking dashboard built with React, TypeScript, and Vite. It provides an aesthetic visualization of your year, helping you stay mindful of time passing while maintaining a calming interface.
 
-Currently, two official plugins are available:
+##  Screenshot
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Solace Screenshot](./public/screenshot.png)
 
-## React Compiler
+##  Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Daily Countdown:** Highlights the number of days left in the current year.
+- **Year Progress Bar:** A sleek visual indicator showing the percentage of the year that has already elapsed.
+- **Dot Calendar Visualization:** A grid displaying the entire year at a glance, allowing you to see past, present, and future days represented as subtle dots.
+- **Dynamic Date & Time:** Constantly updates to reflect the current date and time left in the current day.
+- **Minimalist Aesthetic:** Uses modern typography (Inter and Archivo Black) with a dark mode base for a premium feel.
 
-## Expanding the ESLint configuration
+##  Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+To run Solace locally on your machine, follow these steps:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Installation
+
+1. Clone or download the repository to your local machine.
+2. Navigate to the project directory:
+   ```bash
+   cd Solace
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running the App
+
+Start the development server:
+
+```bash
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open your browser and navigate to `http://localhost:5173` to view the app.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Building for Production
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+To create a production-ready build:
+
+```bash
+npm run build
 ```
+
+This will generate a `dist` folder containing the optimized assets.
+
+## 🛠 Technologies Used
+
+- **React 19**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS 4**
+
+##  Typography
+
+- Primary Font: **Archivo Black**
+- Secondary Font: **Inter** / **Raleway**
+
+Enjoy tracking your year with Solace!

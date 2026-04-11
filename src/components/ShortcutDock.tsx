@@ -3,6 +3,34 @@ import { motion, AnimatePresence } from 'framer-motion';
 import type { Variants } from 'framer-motion';
 import { Plus, X, Check } from 'lucide-react';
 
+const MAX_LEN = 22;
+
+function smartLabel(raw: string): { label: string; truncated: boolean } {
+  const trimmed = raw.trim();
+  try {
+    // Only try URL parsing if the string looks URL-like
+    if (/^https?:\/\//i.test(trimmed) || trimmed.includes('.') && trimmed.includes('/')) {
+      const url = new URL(/^https?:\/\//i.test(trimmed) ? trimmed : 'https://' + trimmed);
+      // Use the last meaningful path segment
+      const parts = url.pathname.split('/').filter(Boolean);
+      if (parts.length > 0) {
+        const candidate = parts[parts.length - 1] || parts[parts.length - 2] || url.hostname;
+        const label = candidate.length > MAX_LEN ? candidate.slice(0, MAX_LEN) + '…' : candidate;
+        return { label, truncated: label !== raw };
+      }
+      // Fallback to hostname without www
+      const host = url.hostname.replace(/^www\./, '');
+      return { label: host, truncated: host !== raw };
+    }
+  } catch {
+    // Not a valid URL — fall through to plain truncation
+  }
+  if (trimmed.length > MAX_LEN) {
+    return { label: trimmed.slice(0, MAX_LEN) + '…', truncated: true };
+  }
+  return { label: trimmed, truncated: false };
+}
+
 interface Shortcut {
   id: string;
   name: string;
@@ -102,9 +130,10 @@ export default function ShortcutDock() {
               href={shortcut.url}
               target="_blank"
               rel="noreferrer"
-              className="hover:text-neutral-200 transition-colors duration-300 cursor-pointer"
+              title={shortcut.name}
+              className="hover:text-neutral-200 transition-colors duration-300 cursor-pointer max-w-[160px] truncate"
             >
-              {shortcut.name}
+              {smartLabel(shortcut.name).label}
             </a>
           </motion.div>
         ))}

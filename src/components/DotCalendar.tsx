@@ -10,7 +10,7 @@ interface DotCalendarProps {
 
 export default function DotCalendar({
   year,
-  currentDate ,
+  currentDate,
 }: DotCalendarProps) {
   const monthGrid = useMemo(() => {
     const normalizedCurrent = new Date(currentDate);
@@ -28,8 +28,8 @@ export default function DotCalendar({
         let status: DotStatus = "future";
 
         if (dotDate < normalizedCurrent) status = "passed";
-      else if (dotDate.getTime() === normalizedCurrent.getTime())
-        status = "today";
+        else if (dotDate.getTime() === normalizedCurrent.getTime())
+          status = "today";
 
         return {
           id: `${monthIndex}-${dayNumber}`,

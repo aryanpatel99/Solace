@@ -22,9 +22,9 @@ export default function TooltipDot({status, dateLabel}: TooltipDotProps) {
     <div className="relative group">
       <div className={`${base} ${size} ${color}`} />
 
-      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 
-                      bg-zinc-800 text-xs text-zinc-200 rounded opacity-0 
-                      group-hover:opacity-100 transition pointer-events-none">
+      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 
+                      bg-zinc-800 text-xs text-zinc-200 rounded-full opacity-0 
+                      group-hover:opacity-100 transition pointer-events-none whitespace-nowrap">
         {dateLabel}
       </div>
     </div>

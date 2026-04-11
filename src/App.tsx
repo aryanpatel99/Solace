@@ -3,6 +3,7 @@ import Countdown from './components/Countdown.js'
 import DotCalendar from './components/DotCalendar.js'
 import Header from './components/Header.js'
 import YearProgress from './components/YearProgress.js'
+import ShortcutDock from './components/ShortcutDock.js'
 import { useTime } from './hooks/useTime.js'
 import { formatFullDate, getDaysLeftInYear, getTimeLeftToday, getYearProgress } from './utils/dateUtils.js'
 
@@ -22,6 +23,7 @@ function App() {
       <YearProgress progress={progress} year = {now.getFullYear()}/>
       <DotCalendar   year={now.getFullYear()}
   currentDate={now}/>
+      <ShortcutDock />
     </div>
 
     </>

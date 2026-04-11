@@ -139,12 +139,14 @@ export default function ShortcutDock() {
                 <button
                   onClick={handleAdd}
                   className="p-1 rounded text-neutral-400 hover:text-green-500 hover:bg-neutral-800 transition-all"
+                  aria-label="Confirm add shortcut"
                 >
                   <Check size={12} strokeWidth={2.5} />
                 </button>
                 <button
                   onClick={() => setIsAdding(false)}
                   className="p-1 rounded text-neutral-400 hover:text-red-500 hover:bg-neutral-800 transition-all"
+                  aria-label="Cancel add shortcut"
                 >
                   <X size={12} strokeWidth={2.5} />
                 </button>

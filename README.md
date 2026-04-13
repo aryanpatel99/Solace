@@ -1,69 +1,69 @@
 # Solace
 
-Solace is a beautifully designed, minimalist time-tracking dashboard built with React, TypeScript, and Vite. It provides an aesthetic visualization of your year, helping you stay mindful of time passing while maintaining a calming interface.
+> A minimalist, typography-driven new tab extension for time awareness and intentional focus.
 
-##  Screenshot
+Solace transforms your browser's new tab page into a serene, ambient dashboard. By gently visualizing the passage of time—days, months, and the year—it shifts perspective from endless scrolling to mindful productivity.
 
-![Solace Screenshot](./public/screenshot.png)
+*(Note: Preview image will be updated soon)*
+![Solace Preview](./public/solace.png)
 
-##  Features
+## Core Features
 
-- **Daily Countdown:** Highlights the number of days left in the current year.
-- **Year Progress Bar:** A sleek visual indicator showing the percentage of the year that has already elapsed.
-- **Dot Calendar Visualization:** A grid displaying the entire year at a glance, allowing you to see past, present, and future days represented as subtle dots.
-- **Dynamic Date & Time:** Constantly updates to reflect the current date and time left in the current day.
-- **Minimalist Aesthetic:** Uses modern typography (Inter and Archivo Black) with a dark mode base for a premium feel.
+- **Ambient Time-Tracking**: A refined view of the current year's progression, shifting focus to what matters.
+- **Dot Calendar Visualization**: A beautifully rendered grid representing every day of the year at a glance, allowing you to reflect on past days and anticipate the future.
+- **Shortcut Dock**: Quick access to your most important links, minimizing friction between opening a tab and getting to work.
+- **Minimalist Aesthetic**: Masterfully crafted with modern typography (Archivo Black and Inter) and seamless dark/light mode transitions.
+- **Dynamic Adaptability**: Constantly updates in real-time, functioning as both a clock and a subtle yearly countdown.
 
-##  Getting Started
+## Installation (Browser Extension)
 
-To run Solace locally on your machine, follow these steps:
+To use Solace as your default New Tab experience, you can load it as an "unpacked extension" in any Chromium-based browser (Google Chrome, Microsoft Edge, Brave, etc.).
 
-### Prerequisites
-
-Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
-
-### Installation
-
-1. Clone or download the repository to your local machine.
-2. Navigate to the project directory:
-   ```bash
-   cd Solace
-   ```
-3. Install the dependencies:
-   ```bash
-   npm install
-   ```
-
-### Running the App
-
-Start the development server:
+### Step 1: Get the files
+Clone the repository to your local machine, or download the source code as a ZIP file directly from GitHub and extract it.
 
 ```bash
-npm run dev
+git clone https://github.com/your-username/solace.git
+cd solace
 ```
 
-Open your browser and navigate to `http://localhost:5173` to view the app.
-
-### Building for Production
-
-To create a production-ready build:
+### Step 2: Build the project
+Since Solace is built with React and Vite, you need to compile the source code into static files. Make sure you have [Node.js](https://nodejs.org/) installed before proceeding.
 
 ```bash
+npm install
 npm run build
 ```
 
-This will generate a `dist` folder containing the optimized assets.
+This command generates a `dist` folder inside the project directory, which contains the compiled extension ready for your browser.
 
-## 🛠 Technologies Used
+### Step 3: Add to your browser
+1. Open your browser and navigate to `chrome://extensions/` (or `edge://extensions/` for Edge).
+2. Turn on **Developer mode** (usually a toggle switch located in the top right corner).
+3. Click the **Load unpacked** button.
+4. Select the `dist` directory that was generated in Step 2.
+5. Open a new tab and experience Solace.
 
-- **React 19**
-- **TypeScript**
-- **Vite**
-- **Tailwind CSS 4**
+## Local Development
 
-##  Typography
+If you would like to customize the dashboard or contribute to the project:
 
-- Primary Font: **Archivo Black**
-- Secondary Font: **Inter** / **Raleway**
+```bash
+# Install dependencies
+npm install
 
-Enjoy tracking your year with Solace!
+# Start the development server
+npm run dev
+```
+
+The app will be available at `http://localhost:5173`. Any changes made during development will automatically reflect in the browser.
+
+## Technologies Used
+
+- **React 19**: Component architecture and state management
+- **TypeScript**: Enhanced type safety and predictability
+- **Tailwind CSS 4**: Utility-first styling for precise aesthetic control
+- **Framer Motion**: Fluid animations and micro-interactions
+- **Vite**: High-performance frontend tooling
+
+

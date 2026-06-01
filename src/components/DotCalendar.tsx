@@ -46,7 +46,7 @@ export default function DotCalendar({
     <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 max-w-6xl">
       {monthGrid.map((month) => (
         <div key={month.monthName} className="flex flex-col gap-3">
-          <span className="text-xs text-zinc-500 tracking-widest uppercase">
+          <span className="text-xs text-stone-400 dark:text-zinc-500 tracking-widest uppercase">
             {month.monthName}
           </span>
 

@@ -1,0 +1,52 @@
+src/components/Greeting.tsx
+  s_526e75467114fb::t_164128ee8a537f 1-69
+src/components/YearProgress.tsx
+  s_526e75467114fb::t_2499029cc624b5 4
+src/components/DotCalendar.tsx
+  s_526e75467114fb::t_5624f4263602f4 49
+src/components/TooltipDot.tsx
+  s_526e75467114fb::t_562580d327080c 5,8,11,14-19,22-31
+src/components/ShortcutDock.tsx
+  s_526e75467114fb::t_047da0549f3baa 2,4,8,11,15-16,19,22,24,33-46,51,65-66,68-69,71-77,82-83,88,108-109,115-146,151,156-177,179-192,196,201,203,206,210,212-213,215,218,224-225,235,240-242
+  s_526e75467114fb::t_851df5717d4d4e 47-50,52-64,70
+  h_ccbfe03d15f891 67
+src/components/Countdown.tsx
+  s_526e75467114fb::t_e383093f2eb6c6 3-5
+src/components/ModeToggle.tsx
+  s_526e75467114fb::t_2917648c7d0b37 1-15
+src/context/ThemeContext.tsx
+  s_526e75467114fb::t_dd5d65eece91ae 1-34
+src/main.tsx
+  s_526e75467114fb::t_1a1f898c7ae68b 5,9-11
+src/App.tsx
+  s_526e75467114fb::t_36a12c897f2989 27
+  s_526e75467114fb::t_8059dff97b8dba 7,22-25,29-30
+  s_526e75467114fb::t_2db895fd362fb0 8
+src/index.css
+  s_526e75467114fb::t_8e273b4f76b9d6 6-7
+index.html
+  s_526e75467114fb::t_0fc44ff02f58a6 8-13
+src/components/Header.tsx
+  s_526e75467114fb::t_4f09d874053dab 5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "9261070036ba3d998758f1fa386697580e6edd02",
+  "prompts": {},
+  "humans": {
+    "h_ccbfe03d15f891": {
+      "author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_526e75467114fb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "33c3b2b2-b8b4-49e3-93ba-889326e479cd",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  }
+}

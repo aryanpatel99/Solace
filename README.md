@@ -4,7 +4,10 @@
 
 Solace transforms your browser's new tab page into a serene, ambient dashboard. By gently visualizing the passage of time - days, months, and the year - it shifts perspective from endless scrolling to mindful productivity.
 
-<video src="./public/solace-intro-1780402333355.mp4" autoplay loop muted playsinline></video>
+
+https://github.com/user-attachments/assets/680aa4c3-6743-44f8-90dd-ea40e6adab3c
+
+
 
 ## Core Features
 

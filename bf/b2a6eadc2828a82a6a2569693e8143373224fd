@@ -1,0 +1,50 @@
+src/components/YearProgress.tsx
+  h_ccbfe03d15f891 4
+src/App.tsx
+  s_048b5fb023dd19::t_fcd7864ad31cc9 45
+  h_ccbfe03d15f891 22-44,46-47,57
+src/components/TooltipDot.tsx
+  h_ccbfe03d15f891 15,17,19,27
+src/components/ModeToggle.tsx
+  h_ccbfe03d15f891 12
+src/components/Countdown.tsx
+  h_ccbfe03d15f891 3-5
+src/components/Header.tsx
+  h_ccbfe03d15f891 5
+src/components/DotCalendar.tsx
+  h_ccbfe03d15f891 46-51,53-65,69
+  s_048b5fb023dd19::t_d9b7b4601e7a32 73
+  s_048b5fb023dd19::t_b0d482de36f7ea 66,68
+src/components/ShortcutDock.tsx
+  s_048b5fb023dd19::t_111b49efeaac13 63
+  h_ccbfe03d15f891 56
+README.md
+  s_048b5fb023dd19::t_7650bd111acb81 14
+  s_048b5fb023dd19::t_3251668b5e4c14 11,13,15-16,20,30-31,38,40,42-45,47,57,62-63
+  s_048b5fb023dd19::t_5734e3cb9f7d40 5
+  s_048b5fb023dd19::t_6f5e1a193827d1 12
+  s_048b5fb023dd19::t_fa744fc6519d62 7
+src/components/Greeting.tsx
+  h_ccbfe03d15f891 63
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "bfb2a6eadc2828a82a6a2569693e8143373224fd",
+  "prompts": {},
+  "humans": {
+    "h_ccbfe03d15f891": {
+      "author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_048b5fb023dd19": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "81b11c4a-b217-4d05-8f63-85d122ce72e8",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  }
+}

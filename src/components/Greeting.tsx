@@ -60,7 +60,7 @@ export default function Greeting({ now }: { now: Date }) {
   return (
     <button
       onClick={handleStartEdit}
-      className="text-sm text-stone-400 dark:text-neutral-500 hover:text-stone-600 dark:hover:text-neutral-400 transition-colors duration-300"
+      className="text-sm text-stone-500 dark:text-neutral-500 hover:text-stone-600 dark:hover:text-neutral-400 transition-colors duration-300"
       title="Click to edit"
     >
       {getGreeting(now)}, {name}

@@ -2,7 +2,7 @@
 
 const Header = ({ date }: { date: string }) => {
   return (
-    <div className='text-neutral-400 dark:text-neutral-500 font-medium uppercase tracking-wider'>{date}</div>
+    <div className='text-neutral-500 dark:text-neutral-500 font-medium  tracking-wider'>{date}</div>
   )
 }
 

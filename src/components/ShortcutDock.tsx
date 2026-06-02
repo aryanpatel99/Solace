@@ -53,14 +53,14 @@ function ShortcutItem({ shortcut, onRemove }: ShortcutItemProps) {
         onPointerDown={e => controls.start(e)}
         className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-neutral-300 dark:text-neutral-700 cursor-grab active:cursor-grabbing touch-none"
       >
-        <GripVertical size={10} strokeWidth={2} />
+        <GripVertical size={13} strokeWidth={2} color='grey' />
       </span>
       <button
         onClick={() => onRemove(shortcut.id)}
         className="opacity-0 group-hover:opacity-100 transition-all duration-200 text-neutral-400 dark:text-neutral-700 hover:text-red-500"
         aria-label="Remove shortcut"
       >
-        <X size={12} strokeWidth={2} />
+        <X size={14} strokeWidth={2} />
       </button>
       <a
         href={shortcut.url}

@@ -43,14 +43,34 @@ export default function DotCalendar({
   }, [year, currentDate.getTime()]);
 
   return (
-    <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 max-w-6xl">
+    // <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 max-w-6xl">
+    //   {monthGrid.map((month) => (
+    //     <div key={month.monthName} className="flex flex-col gap-3">
+    //       <span className="text-xs text-stone-400 dark:text-zinc-500 tracking-widest uppercase">
+    //         {month.monthName}
+    //       </span>
+
+    //       <div className="flex flex-wrap gap-2">
+    //         {month.days.map((day) => (
+    //           <TooltipDot
+    //             key={day.id}
+    //             status={day.status}
+    //             dateLabel={day.dateLabel}
+    //           />
+    //         ))}
+    //       </div>
+    //     </div>
+    //   ))}
+    // </div>
+
+    <div className="grid grid-cols-3 gap-6 w-fit">
       {monthGrid.map((month) => (
-        <div key={month.monthName} className="flex flex-col gap-3">
-          <span className="text-xs text-stone-400 dark:text-zinc-500 tracking-widest uppercase">
+        <div key={month.monthName} className="flex flex-col gap-3 w-fit">
+          <span className="text-xs text-stone-500 dark:text-zinc-500 tracking-widest uppercase">
             {month.monthName}
           </span>
 
-          <div className="flex flex-wrap gap-2">
+          <div className="grid grid-rows-7 grid-flow-col gap-2">
             {month.days.map((day) => (
               <TooltipDot
                 key={day.id}

@@ -2,25 +2,24 @@
 
 > A minimalist, typography-driven new tab extension for time awareness and intentional focus.
 
-Solace transforms your browser's new tab page into a serene, ambient dashboard. By gently visualizing the passage of time—days, months, and the year—it shifts perspective from endless scrolling to mindful productivity.
+Solace transforms your browser's new tab page into a serene, ambient dashboard. By gently visualizing the passage of time - days, months, and the year - it shifts perspective from endless scrolling to mindful productivity.
 
-*(Note: Preview image will be updated soon)*
-![Solace Preview](./public/solace.png)
+<video src="./public/solace-intro-1780402333355.mp4" autoplay loop muted playsinline></video>
 
 ## Core Features
 
-- **Ambient Time-Tracking**: A refined view of the current year's progression, shifting focus to what matters.
-- **Dot Calendar Visualization**: A beautifully rendered grid representing every day of the year at a glance, allowing you to reflect on past days and anticipate the future.
-- **Shortcut Dock**: Quick access to your most important links, minimizing friction between opening a tab and getting to work.
-- **Minimalist Aesthetic**: Masterfully crafted with modern typography (Archivo Black and Inter) and seamless dark/light mode transitions.
-- **Dynamic Adaptability**: Constantly updates in real-time, functioning as both a clock and a subtle yearly countdown.
+- **Ambient Time-Tracking**: A real-time view of the current year's progression, with a live countdown of days and hours remaining.
+- **Dot Matrix Calendar**: A column-oriented grid representing every day of the year - weeks flow left to right, days top to bottom - letting you reflect on time passed and anticipate what's ahead.
+- **Contextual Greeting**: A dynamic greeting that adapts to the time of day, paired with the current date.
+- **Shortcut Dock**: Quick access to your most important links with drag-to-reorder, per-item removal, and JSON export/import - minimizing friction between opening a tab and getting to work.
+- **Dark / Light Mode**: A seamless theme toggle with smooth transitions, persisted across sessions.
+- **Minimalist Aesthetic**: Crafted with modern typography (Archivo Black and Inter) and a clean, distraction-free layout.
 
 ## Installation (Browser Extension)
 
-To use Solace as your default New Tab experience, you can load it as an "unpacked extension" in any Chromium-based browser (Google Chrome, Microsoft Edge, Brave, etc.).
+To use Solace as your default New Tab experience, load it as an "unpacked extension" in any Chromium-based browser (Chrome, Edge, Brave, etc.).
 
 ### Step 1: Get the files
-Clone the repository to your local machine, or download the source code as a ZIP file directly from GitHub and extract it.
 
 ```bash
 git clone https://github.com/your-username/solace.git
@@ -28,25 +27,24 @@ cd solace
 ```
 
 ### Step 2: Build the project
-Since Solace is built with React and Vite, you need to compile the source code into static files. Make sure you have [Node.js](https://nodejs.org/) installed before proceeding.
+
+Make sure [Node.js](https://nodejs.org/) is installed, then run:
 
 ```bash
 npm install
 npm run build
 ```
 
-This command generates a `dist` folder inside the project directory, which contains the compiled extension ready for your browser.
+This generates a `dist` folder containing the compiled extension.
 
-### Step 3: Add to your browser
-1. Open your browser and navigate to `chrome://extensions/` (or `edge://extensions/` for Edge).
-2. Turn on **Developer mode** (usually a toggle switch located in the top right corner).
-3. Click the **Load unpacked** button.
-4. Select the `dist` directory that was generated in Step 2.
-5. Open a new tab and experience Solace.
+### Step 3: Load in your browser
+
+1. Navigate to `chrome://extensions/` (or `edge://extensions/` for Edge).
+2. Enable **Developer mode** (toggle in the top-right corner).
+3. Click **Load unpacked** and select the `dist` folder.
+4. Open a new tab and experience Solace.
 
 ## Local Development
-
-If you would like to customize the dashboard or contribute to the project:
 
 ```bash
 # Install dependencies
@@ -56,14 +54,12 @@ npm install
 npm run dev
 ```
 
-The app will be available at `http://localhost:5173`. Any changes made during development will automatically reflect in the browser.
+The app will be available at `http://localhost:5173` with hot-reload enabled.
 
 ## Technologies Used
 
 - **React 19**: Component architecture and state management
-- **TypeScript**: Enhanced type safety and predictability
-- **Tailwind CSS 4**: Utility-first styling for precise aesthetic control
+- **TypeScript**: Type safety and predictability
+- **Tailwind CSS 4**: Utility-first styling
 - **Framer Motion**: Fluid animations and micro-interactions
 - **Vite**: High-performance frontend tooling
-
-
